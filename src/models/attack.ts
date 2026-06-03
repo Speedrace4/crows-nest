@@ -17,4 +17,5 @@ export interface Attack {
     range: Range;
     damage: Damage;
     characteristic: Characteristic;
+    targets: number;
 }

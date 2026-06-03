@@ -2,7 +2,7 @@ import type { Attack } from "@/models/attack";
 
 export type CreatureSize = "Tiny" | "Small" | "Medium" | "Large" | "Holy ****"
 
-export type CreatureType = "Animal" | "Blood" | "Demon" | "Holy" | "Undead"
+export type CreatureType = "Animal" | "Blood" | "Demon" | "Holy" | "Undead" | "Unique"
 
 export type Characteristic = "Agility" | "Mind" | "Strength"
 
@@ -26,7 +26,8 @@ export interface Feature {
 
 export interface Creature {
     name: string;
-    description: string;
+    description?: string;
+    pet?: boolean;
     size: CreatureSize;
     type: CreatureType;
     power: number;
@@ -36,5 +37,5 @@ export interface Creature {
     characteristics: Characteristics;
     attacks: Attack[];
     features: Feature[];
-    common_names: string[];
+    common_names?: string[];
 }

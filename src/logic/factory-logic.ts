@@ -2,12 +2,13 @@ import type { Attack } from "@/models/attack";
 import type { Characteristic, Feature } from "@/models/creature";
 
 export class FactoryLogic {
-    static createAttack = (name: string, melee: number, ranged: number, t2: number, t3: number, characteristic: Characteristic, special_t2: boolean = false, special_t3: boolean = false): Attack => {
+    static createAttack = (data: {name: string, melee?: number, ranged?: number, t2: number, t3: number, characteristic: Characteristic, targets?: number, special_t2?: boolean, special_t3?: boolean}): Attack => {
         return {
-            name: name,
-            range: {melee: melee, ranged: ranged},
-            damage: {t2: t2, t3: t3, special_t2: special_t2, special_t3: special_t3},
-            characteristic: characteristic
+            name: data.name,
+            range: {melee: data.melee ? data.melee : 0, ranged: data.ranged ? data.ranged : 0},
+            damage: {t2: data.t2, t3: data.t3, special_t2: data.special_t2 ? data.special_t2 : false, special_t3: data.special_t3 ? data.special_t3 : false},
+            characteristic: data.characteristic,
+            targets: data.targets ? data.targets : 1
         }
     }
 
