@@ -1,8 +1,7 @@
-import { Blacksmithing } from "@/data/skills/general-skills";
 import type { Attack } from "@/models/attack";
 import type { CraftingInfo, CraftingType, ProjectPoints } from "@/models/craftinginfo";
 import type { Characteristic, Feature } from "@/models/creature";
-import type { MetalWeaponUpgrade, Upgrade } from "@/models/upgrade";
+import type { MetalWeaponUpgrade } from "@/models/upgrade";
 
 export class FactoryLogic {
     static createAttack = (data: {name: string, melee?: number, ranged?: number, t2: number, t3: number, characteristics: Characteristic[], targets?: number}): Attack => {
