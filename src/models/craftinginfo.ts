@@ -1,9 +1,14 @@
-export type CraftingTypes = "Alchemy" | "Blacksmithing" | "Enchanting"
+export type CraftingType = "Alchemy" | "Blacksmithing" | "Enchanting"
+
+export interface ProjectPoints {
+	base: number,
+	fine?: number,
+	masterwork?: number
+}
 
 export interface CraftingInfo {
-	type: CraftingTypes;
+	type: CraftingType;
 	craft_mod: number;
-	materials: string[];
-	pp: number;
-	price: number;
+	materials: string;
+	pp: ProjectPoints;
 }

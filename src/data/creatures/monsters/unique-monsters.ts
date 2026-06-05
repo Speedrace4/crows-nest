@@ -17,21 +17,21 @@ export const RingCollector: Creature = {
             ranged: 10,
             t2: 8,
             t3: 14,
-            characteristic: "Agility"
+            characteristics: ["Agility"]
         }),
         FactoryLogic.createAttack({
             name: "Sword",
             melee: 1,
             t2: 7,
             t3: 12,
-            characteristic: "Strength"
+            characteristics: ["Strength"]
         }),
         FactoryLogic.createAttack({
             name: "Kneel",
             melee: 1,
             t2: 4,
             t3: 8,
-            characteristic: "Agility",
+            characteristics: ["Agility"],
             targets: 2
         })
     ],

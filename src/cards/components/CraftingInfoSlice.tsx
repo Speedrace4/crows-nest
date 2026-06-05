@@ -5,9 +5,8 @@ const CraftingInfoSlice = (props: CraftingInfo) => {
     <div className="item_info">
         <div className="card-slice">
             <div className="card-cell">{props.type} +{props.craft_mod}</div>
-            <div className="card-cell">{props.materials.join(", ")}</div>
-            <div className="card-cell">{props.pp}pp</div>
-            <div className="card-cell">{props.price}gc</div>
+            <div className="card-cell">{props.materials}</div>
+            <div className="card-cell">{props.pp.base}pp</div>
         </div>
     </div>
   )

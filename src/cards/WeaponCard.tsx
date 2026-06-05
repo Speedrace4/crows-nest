@@ -23,7 +23,7 @@ const WeaponCard = (props: {title: string, key: number, stack: number, slots: nu
         </div>
         {PowerRoll({tier2: props.tier2, tier3: props.tier3})}
         {Property({title: "Bashing", key: 1})}
-        {CraftingInfoSlice({type: "Blacksmithing", craft_mod: 1, materials: ["1 iron bar"], pp: 10, price: 15})}
+        {CraftingInfoSlice({type: "Blacksmithing", craft_mod: 1, materials: "1 iron bar", pp: {base: 10}})}
       </div>
     </Draggable>
   )

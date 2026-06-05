@@ -31,14 +31,15 @@ const CreatureCard = (props: Creature) => {
     return "Melee " + range.melee + " \ " + "Ranged " + range.ranged;
   }
 
-  const getAttackCharacteristic = (characteristic: Characteristic) => {
-    let characteristicValue = props.characteristics.strength;
-    if (characteristic == "Agility") {
-      characteristicValue = props.characteristics.agility;
+  const getAttackCharacteristic = (characteristics: Characteristic[]) => {
+    let characteristicValues = [];
+    if (characteristics.includes("Agility")) {
+      characteristicValues.push(props.characteristics.agility);
     }
-    else if (characteristic == "Mind") {
-      characteristicValue = props.characteristics.mind;
+    else if (characteristics.includes("Mind")) {
+      characteristicValues.push(props.characteristics.mind);
     }
+    let characteristicValue = Math.max(...characteristicValues);
     return characteristicValue >= 0 ? "+" + characteristicValue : "-" + characteristicValue;
   }
 
@@ -73,10 +74,10 @@ const CreatureCard = (props: Creature) => {
         </div>
         {props.attacks.map(attack => 
           <div className="card-slice">
-              <div><b>{attack.name} ({getAttackCharacteristic(attack.characteristic)})</b></div>
+              <div><b>{attack.name} ({getAttackCharacteristic(attack.characteristics)})</b></div>
               <div>{getAttackRange(attack.range)}</div>
-              <div>{attack.damage.t2} dam{attack.damage.special_t2 ? "*" : null}</div>
-              <div>{attack.damage.t3} dam{attack.damage.special_t3 ? "*" : null}</div>
+              <div>{attack.damage.t2} dam</div>
+              <div>{attack.damage.t3} dam</div>
           </div>
         )}
         {props.features.map(feature => 

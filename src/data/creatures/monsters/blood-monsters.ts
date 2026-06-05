@@ -18,7 +18,7 @@ export const BloodCreatureA: Creature = {
             melee: 1,
             t2: 2,
             t3: 3,
-            characteristic: "Agility"
+            characteristics: ["Agility"]
         })
     ],
     features: [
@@ -43,17 +43,14 @@ export const BloodCreatureB: Creature = {
             melee: 1,
             t2: 3,
             t3: 4,
-            characteristic: "Agility",
-            special_t2: true
+            characteristics: ["Agility"]
         }),
         FactoryLogic.createAttack({
             name: "Tendril",
             melee: 1,
             t2: 3,
             t3: 4,
-            characteristic: "Agility",
-            special_t2: false,
-            special_t3: true,
+            characteristics: ["Agility"]
         })
     ],
     features: [
@@ -78,14 +75,14 @@ export const BloodCreatureC: Creature = {
             melee: 1,
             t2: 4,
             t3: 8,
-            characteristic: "Strength"
+            characteristics: ["Strength"]
         }),
         FactoryLogic.createAttack({
             name: "Clot",
             ranged: 10,
             t2: 3,
             t3: 7,
-            characteristic: "Strength"
+            characteristics: ["Strength"]
         })
     ],
     features: [

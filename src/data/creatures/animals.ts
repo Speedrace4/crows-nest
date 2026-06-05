@@ -16,14 +16,14 @@ export const Bear: Creature = {
             melee: 1,
             t2: 4,
             t3: 6,
-            characteristic: "Strength"
+            characteristics: ["Strength"]
         }),
         FactoryLogic.createAttack({
             name: "Claws",
             melee: 1,
             t2: 2,
             t3: 3,
-            characteristic: "Strength",
+            characteristics: ["Strength"],
             targets: 2
         })
     ],
@@ -48,7 +48,7 @@ export const Cat: Creature = {
             melee: 1,
             t2: 2,
             t3: 3,
-            characteristic: "Agility"
+            characteristics: ["Agility"]
         })
     ],
     features: [
@@ -72,7 +72,7 @@ export const Dog: Creature = {
             melee: 1,
             t2: 2,
             t3: 4,
-            characteristic: "Agility"
+            characteristics: ["Agility"]
         })
     ],
     features: [
@@ -96,7 +96,7 @@ export const Goat: Creature = {
             melee: 1,
             t2: 2,
             t3: 4,
-            characteristic: "Strength"
+            characteristics: ["Strength"]
         })
     ],
     features: [
@@ -120,7 +120,7 @@ export const Horse: Creature = {
             melee: 1,
             t2: 3,
             t3: 5,
-            characteristic: "Strength"
+            characteristics: ["Strength"]
         })
     ],
     features: []
@@ -141,7 +141,7 @@ export const Rat: Creature = {
             melee: 1,
             t2: 1,
             t3: 2,
-            characteristic: "Agility"
+            characteristics: ["Agility"]
         })
     ],
     features: [
@@ -164,7 +164,7 @@ export const Wolf: Creature = {
             melee: 1,
             t2: 3,
             t3: 4,
-            characteristic: "Agility"
+            characteristics: ["Agility"]
         })
     ],
     features: [

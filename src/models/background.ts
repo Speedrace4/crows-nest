@@ -1,4 +1,5 @@
-import type { Characteristic } from "./creature";
+import type { Armor } from "./armor";
+import type { Characteristic, Creature } from "./creature";
 import type { Gear } from "./gear";
 import type { Skill } from "./skill";
 import type { Trait } from "./trait";
@@ -12,4 +13,7 @@ export interface Background {
     die_roll: number;
     skills: Skill[];
     equipment: Gear[];
+    armor?: Armor[];
+    pets?: Creature[];
+    gold?: number;
 }
